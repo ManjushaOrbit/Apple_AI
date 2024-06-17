@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+    {% block content %}
+        <div>
+            <h3>Submit Buisnesscard Data</h3>
+            <form method="post" action="{% url 'buisnesscard' %}" >
+               
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+        <div>
+            <h3>Submit Patient Data</h3>
+            <form method="post" action="{% url 'patient' %}" >
+               
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Submit KYC Data</h3>
+            <form method="post" action="{% url 'kyc' %}" >
+               
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Submit Adhar Data</h3>
+            <form method="post" action="{% url 'adhar' %}" >
+               
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    {% endblock %}
+

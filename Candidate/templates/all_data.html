@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mx-5 my-5">
+        <h2 class="flex-none text-xl font-medium text-blue-900" >Buisness Card Data</h2>
+</div>
+<div class="flex flex-col px-4 py-4 mx-5">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">First Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Last Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Contact Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Email Address</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                {% for b in data.buisnesscard%}     
+                        <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{b.first_name}}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.last_name}}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.phone}}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.email}}</td>
+                        </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="mx-5 my-5">
+        <h2 class="flex-none text-xl font-semibold text-blue-900" >Patient Data</h2>
+</div>
+<div class="flex flex-col px-4 py-4 mx-5">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">First Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Last Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Contact Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Date Of Birth</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Age</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Gender</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Insurance Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Insurance Holder Name</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                {% for b in data.patient_data%} 
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{b.firstname}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.lastname}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.phone}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.dob}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.age}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.sex}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.insurance_number}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.insurance_holder_name}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="mx-5 my-5">
+        <h2  class="flex-none text-xl font-semibold text-blue-900">Adhar Data</h2>
+</div>
+<div class="flex flex-col px-4 py-4 mx-5">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+              
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Year of Birth</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Gender</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Adhar Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Father's Name</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Address</th>
+                  </tr>
+            
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                {% for b in data.adhar%} 
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{b.name}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.year_of_birth}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.gender}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.aadharno}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.fathers_name}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.address}}</td>
+                  </tr>
+                {% endfor %}
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class="mx-5 my-5">
+        <h2  class="flex-none text-xl font-semibold text-blue-900">KYC Data</h2>
+</div>
+<div class="flex flex-col px-4 py-4 mx-5">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="overflow-hidden">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Date of Birth</th>
+                    <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Gender</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Adhar Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Father's Name</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Address</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Marital Status</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Nationality</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Pan Number</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Residence Details</th>
+                    <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                {% for b in data.kycdata%} 
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{b.name}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.dob}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{b.gender}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.aadharno}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.fathers_name}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.address}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.marital_status}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.nationality}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.pan_number}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.residence_details}}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">{{b.status}}</td>
+                  </tr>
+                {% endfor %}
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

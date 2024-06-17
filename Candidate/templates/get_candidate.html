@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+    {% block content %}
+        <div>
+            <h3>Submit Candidate Data</h3>
+            <form method="post" action="{% url 'createCandidateData' %}" enctype="multipart/form-data">
+                <!-- <input type="text" placeholder="Name" name ="name">
+                <input type="text" placeholder="Post applied for" name="post">
+                <input type="numder" placeholder="Total months of experience"name = "months">
+                <input type="numder" placeholder="Current CTC "name = "current_ctc">
+                <input type="numder" placeholder="Expected CTC"name = "expected_ctc">
+                <input type ="">
+                <input> -->
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div></div>
+    {% endblock %}
+
