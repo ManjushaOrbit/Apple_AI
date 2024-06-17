@@ -4,7 +4,7 @@ from .views import *
 
 urlpatterns = [
     # path('',createCandidateData, name = 'createCandidateData'),
-    path('submitbuisnesscard/',submit_buisnesscard_data,name='buisnesscard'),
+    path('submitbusinesscard/',submit_buisnesscard_data,name='businesscard'),
     path('createpatient/',create_patient,name='patient'),
     path('submitadhar/',submit_adhar_data,name='adhar'),
     path('submitkyc/',submit_kyc_data,name='kyc'),
