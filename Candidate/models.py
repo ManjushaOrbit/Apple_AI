@@ -61,7 +61,7 @@ class Adhar(models.Model):
     year_of_birth = models.CharField(max_length = 10, null = True,blank=True)
     gender = models.CharField(max_length=10,null=True,blank=True)
     aadharno = models.CharField(max_length=20, null=True,blank=True)
-    fathers_name = models.CharField(max_length = 500,null = True,blank=True)
+    # fathers_name = models.CharField(max_length = 500,null = True,blank=True)
     address = models.TextField(null=True,blank=True)
 
 class KYC(models.Model):
